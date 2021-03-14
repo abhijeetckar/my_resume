@@ -3,100 +3,113 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MaterialApp(
-  home: ProfilePage(),
-));
+      home: ProfilePage(),
+    ));
 
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body : SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             SizedBox(height: 24.0),
             Container(
                 color: Color.fromRGBO(35, 153, 136, 1),
-                child : Row(
+                padding: EdgeInsets.all(5.0),
+                child: Row(
                   children: <Widget>[
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.all(10.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text('Abhijeet Chimurkar',
-                              style: TextStyle(
-                                color: Color.fromRGBO(232, 230, 227, 1),
-                                fontSize: 25,
+                          margin: EdgeInsets.all(10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Abhijeet Chimurkar',
+                                style: TextStyle(
+                                  color: Color.fromRGBO(232, 230, 227, 1),
+                                  fontSize: 25,
+                                ),
                               ),
-                            ),
-                            Text('Software Engineer'),
-                            Text('Seeking a challenging job to utilize my professional as well as interpersonal skills for the growth of both organization and self, so as to fulfill the task provided most efficiently and to improve my skills.',
-                              style: TextStyle(
-                                color: Color.fromRGBO(232, 230, 227, 1),
-                                fontSize: 8,
-                              ),
-                            )
-                          ],
-                        )
-                      ),
+                              Text('Software Engineer'),
+                              Padding(
+                                child: Text(
+                                  'Seeking a challenging job to utilize my professional as well as interpersonal skills for the growth of both organization and self, so as to fulfill the task provided most efficiently and to improve my skills.',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(232, 230, 227, 1),
+                                    fontSize: 9,
+                                  ),
+                                ),
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                              )
+                            ],
+                          )),
                     ),
                     Container(
-                      width: 80.0,
-                      height: 80.0,
-                      child: CircleAvatar(
-                        radius: 35.0,
-                        backgroundColor: Color.fromRGBO(37, 89, 88, 1),
+                        width: 80.0,
+                        height: 80.0,
                         child: CircleAvatar(
                           radius: 35.0,
-                          backgroundImage: AssetImage('images/image_2.jpg'),
-                        ),
-                      )
-                    ),
+                          backgroundColor: Color.fromRGBO(37, 89, 88, 1),
+                          child: CircleAvatar(
+                            radius: 35.0,
+                            backgroundImage: AssetImage('images/image_2.jpg'),
+                          ),
+                        )),
                   ],
-                )
-            ),
+                )),
             Container(
               color: Color.fromRGBO(33, 136, 118, 1),
               child: Row(
                 children: <Widget>[
-                  Expanded(child: Container(
+                  Expanded(
+                      child: Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Row(
                           children: <Widget>[
                             InkWell(
-                              child: Text('ckar.abhijeet@gmail.com',
+                              child: Text(
+                                'ckar.abhijeet@gmail.com',
                                 style: TextStyle(
                                   color: Color.fromRGBO(232, 230, 227, 1),
+                                  fontSize: 10
                                 ),
                               ),
-                              onTap: ()async{
-                                if (await canLaunch("mailto:ckar.abhijeet@gmail.com")) {
-                                  await launch("mailto:ckar.abhijeet@gmail.com");
-                                }else {
+                              onTap: () async {
+                                if (await canLaunch(
+                                    "mailto:ckar.abhijeet@gmail.com")) {
+                                  await launch(
+                                      "mailto:ckar.abhijeet@gmail.com");
+                                } else {
                                   throw 'Could not launch mailto:ckar.abhijeet@gmail.com';
                                 }
                               },
                             ),
                           ],
                         ),
-                        Text('Mumbai, India',
+                        Text(
+                          'Mumbai, India',
                           style: TextStyle(
                             color: Color.fromRGBO(232, 230, 227, 1),
+                            fontSize: 10
                           ),
                         ),
                         InkWell(
-                          child: Text('github.com/abhijeetckar',
+                          child: Text(
+                            'github.com/abhijeetckar',
                             style: TextStyle(
                               color: Color.fromRGBO(232, 230, 227, 1),
+                              fontSize: 10
                             ),
                           ),
-                          onTap: ()async{
-                            if (await canLaunch("https://github.com/abhijeetckar")) {
+                          onTap: () async {
+                            if (await canLaunch(
+                                "https://github.com/abhijeetckar")) {
                               await launch("https://github.com/abhijeetckar");
-                            }else {
+                            } else {
                               throw 'Could not launch https://github.com/abhijeetckar';
                             }
                           },
@@ -104,39 +117,50 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                   )),
-                  Expanded(child: Container(
+                  Expanded(
+                      child: Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('+91-9834776441',
+                        Text(
+                          '+91-9834776441',
                           style: TextStyle(
                             color: Color.fromRGBO(232, 230, 227, 1),
+                            fontSize: 10
                           ),
                         ),
                         InkWell(
-                          child: Text('linkedin.com/in/abhijeet-c-b89977103',
+                          child: Text(
+                            'linkedin.com/in/abhijeet-c-b89977103',
                             style: TextStyle(
                               color: Color.fromRGBO(232, 230, 227, 1),
+                              fontSize: 10
                             ),
                           ),
-                          onTap: ()async{
-                            if (await canLaunch("https://linkedin.com/in/abhijeet-c-b89977103")) {
-                              await launch("https://linkedin.com/in/abhijeet-c-b89977103");
-                            }else {
+                          onTap: () async {
+                            if (await canLaunch(
+                                "https://linkedin.com/in/abhijeet-c-b89977103")) {
+                              await launch(
+                                  "https://linkedin.com/in/abhijeet-c-b89977103");
+                            } else {
                               throw 'Could not launch https://linkedin.com/in/abhijeet-c-b89977103';
                             }
                           },
                         ),
                         InkWell(
-                          child: Text('stackoverflow.com/users/11441850/abhijeet-ckar',
+                          child: Text(
+                            'stackoverflow.com/users/11441850/abhijeet-ckar',
                             style: TextStyle(
                               color: Color.fromRGBO(232, 230, 227, 1),
+                              fontSize: 10
                             ),
                           ),
-                          onTap: ()async{
-                            if (await canLaunch("https://stackoverflow.com/users/11441850/abhijeet-ckar")) {
-                              await launch("https://stackoverflow.com/users/11441850/abhijeet-ckar");
-                            }else {
+                          onTap: () async {
+                            if (await canLaunch(
+                                "https://stackoverflow.com/users/11441850/abhijeet-ckar")) {
+                              await launch(
+                                  "https://stackoverflow.com/users/11441850/abhijeet-ckar");
+                            } else {
                               throw 'Could not launch https://stackoverflow.com/users/11441850/abhijeet-ckar';
                             }
                           },
@@ -160,44 +184,101 @@ class ProfilePage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('WORK EXPERIENCE',
+                                Text(
+                                  'WORK EXPERIENCE',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
-                                Text('Software Engineer'),
-                                Text('People Interactive Pvt Ltd'),
-                                Text('07/2018 - Present Mumbai, IN',
+                                SizedBox(height: 2),
+                                Text('Software Engineer',
+                                  style : TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                  )
+                                ),
+                                Text('People Interactive Pvt Ltd',
+                                  style : TextStyle(
+                                    fontSize: 14,
+                                  )
+                                ),
+                                Text(
+                                  '07/2018 - Present Mumbai, IN',
                                   style: TextStyle(
+                                    fontSize: 10,
                                     color: Color.fromRGBO(49, 59, 71, 1),
                                   ),
                                 ),
-                                Text(' Shaadi.com is one of India\'s best known internet brands & the world\'s largest Internet and Matrimonial Services',
+                                Text(
+                                  ' Shaadi.com is one of India\'s best known internet brands & the world\'s largest Internet and Matrimonial Services',
                                   style: TextStyle(
-                                    color: Color.fromRGBO(124, 124, 124, 1)
+                                      fontSize: 10,
+                                      fontStyle: FontStyle.italic,
+                                      color: Color.fromRGBO(124, 124, 124, 1)),
+                                ),
+                                SizedBox(height: 2),
+                                Text(
+                                  'Achievement/Tasks',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontStyle: FontStyle.italic,
+                                      color: Color.fromRGBO(124, 124, 124, 1)),
+                                ),
+                                Text(
+                                  '\u2022 Creating innovative solutions and Incorporating new functionalities and features',
+                                  style: TextStyle(
+                                    fontSize: 10,
                                   ),
                                 ),
-                                Text('Achievement/Tasks',
-                                    style: TextStyle(
-                                      color: Color.fromRGBO(124, 124, 124, 1)
-                                    ),
+                                Text(
+                                  '\u2022 Conceptualizing creative ideas with clients',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                  ),
                                 ),
-                                Text('\u2022 Creating innovative solutions and Incorporating new functionalities and features'),
-                                Text('\u2022 Conceptualizing creative ideas with clients'),
-                                Text('\u2022 Collaborating with the front-end developers and other team members to establish objectives and design more functional, cohesive codes to enhance the user experience'),
-                                Text('\u2022 Communicating design ideas using user flows, process flows and site maps'),
-                                Text('\u2022 Taking initiatives and pro-actively working on development and execution of project plans'),
-                                Text('\u2022 Improving system quality by identifying issues, applying best practices and standard operating procedures'),
+                                Text(
+                                    '\u2022 Collaborating with the front-end developers and other team members to establish objectives and design more functional, cohesive codes to enhance the user experience',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                Text(
+                                    '\u2022 Communicating design ideas using user flows, process flows and site maps',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                Text(
+                                    '\u2022 Taking initiatives and pro-actively working on development and execution of project plans',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                Text(
+                                    '\u2022 Improving system quality by identifying issues, applying best practices and standard operating procedures',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
+                          SizedBox(height: 10),
                           Container(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Text('RECENT PROJECTS',
+                                Text(
+                                  'RECENT PROJECTS',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
                                 Text('Selfie Verification'),
@@ -209,28 +290,48 @@ class ProfilePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          SizedBox(height: 10),
                           Container(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('EDUCATION',
+                                Text(
+                                  'EDUCATION',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
-                                Text('Graduation'),
+                                Text('Graduation',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
                                 Text('Amity University Rajasthan, Jaipur'),
-                                Text('2010-2014 60%',
+                                Text(
+                                  '2010-2014 60%',
                                   style: TextStyle(
                                     color: Color.fromRGBO(49, 59, 71, 1),
+                                    fontSize: 10,
+                                    fontStyle: FontStyle.italic
                                   ),
                                 ),
-                                Text('Courses',
+                                Text(
+                                  'Courses',
                                   style: TextStyle(
                                     color: Color.fromRGBO(49, 59, 71, 1),
+                                    fontSize: 10,
+                                    fontStyle: FontStyle.italic
                                   ),
                                 ),
-                                Text('\u2022 Mechanical and Automation'),
+                                Text('\u2022 Mechanical and Automation',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
                               ],
                             ),
                           )
@@ -240,16 +341,20 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      margin: EdgeInsets.only(left : 10.0),
+                      margin: EdgeInsets.only(left: 10.0),
                       child: Column(
                         children: <Widget>[
                           Container(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('SKILLS/STRENGTHS',
+                                Text(
+                                  'SKILLS/STRENGTHS',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
                                 _buildSkillRow("Javascript", 0.80),
@@ -272,14 +377,19 @@ class ProfilePage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('CERTIFICATES',
+                                Text(
+                                  'CERTIFICATES',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
                                 Text('PG Diploma In Advanced Computing'),
                                 Text('(07/2017 - 02/2018)'),
-                                Text('PG-DAC is a 24-weeks full time postgraduate course comprising of 14 Compulsory Modules and a Project.',
+                                Text(
+                                  'PG-DAC is a 24-weeks full time postgraduate course comprising of 14 Compulsory Modules and a Project.',
                                   style: TextStyle(
                                     color: Color.fromRGBO(49, 59, 71, 1),
                                   ),
@@ -291,14 +401,17 @@ class ProfilePage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text('INTEREST',
+                                Text(
+                                  'INTEREST',
                                   style: TextStyle(
                                     color: Color.fromRGBO(37, 89, 88, 1),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    decoration: TextDecoration.underline
                                   ),
                                 ),
                                 Row(
                                   children: <Widget>[
-
                                     Text('Apache Kakfa'),
                                     Text('AWS'),
                                     Text('Algorithm'),
@@ -344,8 +457,10 @@ Row _buildSkillRow(String skill, double level) {
           flex: 3,
           child: Text(
             skill,
-          )
-      ),
+            style: TextStyle(
+              fontSize: 10,
+            ),
+          )),
       Expanded(
         flex: 4,
         child: LinearProgressIndicator(
