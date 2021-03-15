@@ -7,6 +7,8 @@ void main() => runApp(MaterialApp(
 
 const darkCyan = Color.fromRGBO(37, 89, 88, 1);
 const whiteColor = Color.fromRGBO(232, 230, 227, 1);
+const darkGreen = Color.fromRGBO(33, 136, 118, 1);
+const lightGrey = Color.fromRGBO(124, 124, 124, 1);
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -65,7 +67,7 @@ class ProfilePage extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.all(10.0),
-              color: Color.fromRGBO(33, 136, 118, 1),
+              color: darkGreen,
               child: Column(
                 children: <Widget>[
                   Row(
@@ -209,6 +211,7 @@ class ProfilePage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 _buildSectionHeader('Interest'),
+                                SizedBox(height: 5),
                                 Row(
                                   children: <Widget>[
                                     _buildInterestBox('Apache Kafka'),
@@ -258,6 +261,8 @@ Container _buildSkillRow(String skill, double level) {
         Expanded(
           flex: 4,
           child: LinearProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(darkGreen),
+            backgroundColor: whiteColor,
             value: level,
           ),
         ),
@@ -305,7 +310,7 @@ Container _buildInterestBox(String interest){
     margin: const EdgeInsets.all(2.0),
     padding: const EdgeInsets.all(1.0),
     decoration: BoxDecoration(
-      border: Border.all(color: Colors.blueAccent),
+      border: Border.all(color: lightGrey),
       borderRadius: BorderRadius.all(
         Radius.circular(3.0),
       ),
@@ -352,9 +357,9 @@ Text _buildSectionDescription(String text){
   return Text(
     text,
     style: TextStyle(
-        fontSize: 10,
-        fontStyle: FontStyle.italic,
-        color: Color.fromRGBO(124, 124, 124, 1)
+      fontSize: 10,
+      fontStyle: FontStyle.italic,
+      color: lightGrey,
     ),
   );
 }
