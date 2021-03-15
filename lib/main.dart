@@ -82,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Row(
                     children: <Widget>[
-                      _buildSocialLinks('ckar.abhijeet@gmail.com','mailto:ckar.abhijeet@gmail.com'),
+                      _buildSocialLinks('github.com/abhijeetckar','https://github.com/abhijeetckar'),
                       _buildSocialLinks('stackoverflow.com/users/11441850/abhijeet-ckar', 'https://stackoverflow.com/users/11441850/abhijeet-ckar'),
                     ],
                   ),
