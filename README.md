@@ -8,10 +8,10 @@ $ flutter pub get
 
 --APK link :
 
-https://appsenjoy.com/S7qEm
+https://appsenjoy.com/V9rN8
 
 --Missing
 
-Fonts
-Icons
+Fonts,
+Icons,
 Circle Progress Bar
