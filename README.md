@@ -8,7 +8,7 @@ $ flutter pub get
 
 --APK link :
 
-https://appsenjoy.com/V9rN8
+https://appsenjoy.com/xDazw
 
 --Missing
 
